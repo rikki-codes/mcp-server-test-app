@@ -19,10 +19,10 @@ app.post("/api/test-mcp", async (req, res) => {
   }
 
   try {
-    const testURL = `https://registry.smithery.ai/servers/${installationCode}`; // Example URL, adjust as needed
+    const testURL = `https://registry.smithery.ai/servers/${installationCode}`;
     const response = await axios.get(testURL, {
       headers: {
-        "Authorization": `Bearer ${process.env.SMITHERY_API_KEY}`, // Replace with actual API key
+        "Authorization": `Bearer ${process.env.SMITHERY_API_KEY}`,
         "Content-Type": "application/json",
       },
     });

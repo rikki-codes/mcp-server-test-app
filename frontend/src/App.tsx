@@ -2,6 +2,8 @@ import axios from "axios";
 import { useState } from "react";
 import "./App.css";
 
+const API_BASE_URL = import.meta.env.VITE_BACKEND_URL;
+
 const App = () => {
   const [installationCode, setInstallationCode] = useState("");
   const [response, setResponse] = useState<string | null>(null);
@@ -13,7 +15,7 @@ const App = () => {
     setError(null);
     setResponse(null);
     try {
-      const res = await axios.post("http://localhost:5000/api/test-mcp", {
+      const res = await axios.post(`${API_BASE_URL}/api/test-mcp`, {
         installationCode,
       });
       setResponse(res.data.message);

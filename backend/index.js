@@ -32,7 +32,6 @@ app.post("/api/test-mcp", async (req, res) => {
       return res.status(500).json({ error: "MCP Server did not respond as expected" });
     }
   } catch (error) {
-    console.log("error:",error);
     return res.status(500).json({ error: "Failed to connect to MCP Server" });
   }
 });

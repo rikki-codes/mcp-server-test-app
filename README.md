@@ -28,5 +28,5 @@ npm run dev
 ```sh
 cd backend
 npm install
-npm run dev
+node index.js
 ```
